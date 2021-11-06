@@ -8,6 +8,11 @@ apt update
 apt-cache policy docker-ce
 apt install -y docker-ce
 systemctl status docker
-git clone https://github.com/RomanHorbovyi/jenkins-in-docker.git
-cd jenkins-in-docker
-docker-compose up
+cd /jenkins-in-docker
+docker-compose up -d
+
+# Specify this as user data for the VM instance
+#
+# git clone https://github.com/RomanHorbovyi/jenkins-in-docker.git
+# chmod +x /jenkins-in-docker/userdata.sh
+# ./userdata.sh
